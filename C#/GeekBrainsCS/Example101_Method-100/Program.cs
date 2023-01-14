@@ -1,10 +1,10 @@
 ﻿// Пример метода на задаче 100
 
-int Max(int arg1, int arg2, int arg3)
+int Max(int id1, int id2, int id3)
 {
-    int result = arg1;
-    if (arg2 > result) result = arg2;
-    if (arg3 > result) result = arg3;
+    int result = id1;
+    if (id2 > result) result = id2;
+    if (id3 > result) result = id3;
     return result;
 
 }
