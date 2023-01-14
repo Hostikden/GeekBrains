@@ -6,22 +6,24 @@
 9012 -> 12
 */
 
-Console.Write("Введите целое число: ");
-int number = Convert.ToInt32(Console.ReadLine());
+System.Console.Write("Введите целое число: ");
+int number = System.Convert.ToInt32(System.Console.ReadLine());
 
-  int Sum(int number){
-    
-    int count = Convert.ToString(number).Length;
+int Sum(int number)
+{
+
+    int count = System.Convert.ToString(number).Length;
     int temp = 0;
     int result = 0;
 
-    for (int i = 0; i < count; i++){
-      temp = number - number % 10;
-      result = result + (number - temp);
-      number = number / 10;
+    for (int i = 0; i < count; i++)
+    {
+        temp = number - number % 10;
+        result = result + (number - temp);
+        number = number / 10;
     }
-   return result;
-  }
+    return result;
+}
 
 int sum = Sum(number);
 System.Console.WriteLine("Сумма цифр в числе " + number + " = " + sum);
