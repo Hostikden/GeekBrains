@@ -31,7 +31,7 @@ void GetSumNums(int number)
     {
         sum += i;
     }
-    Console.WriteLine($"Сумма цифр от 1 до введённого числа = {sum}");
+    Console.WriteLine($"Сумма цифр от 1 до введённого числа {Math.Abs(number)} = {sum}");
 }
 
 System.Console.WriteLine("Введите число: ");
