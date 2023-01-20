@@ -56,7 +56,7 @@ static void Sort(int[] array)
     }
 
     int sum = 0;
-    for (int e = array.Length - 1; e >= 0; e--)
+    for (int e = array.Length; e >= 0; e--)
     {
         sum = array[array.Length - 1] - array[0];
     }
