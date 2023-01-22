@@ -39,7 +39,7 @@ void Positive(int[] coll)
     int count = 0;
     for (int index = 0; index < coll.Length; index++)
     {
-        if (coll[index] % 2 == 0)
+        if (coll[index] > 0)
         {
             count++;
         }
