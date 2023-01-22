@@ -24,10 +24,11 @@ static void ShowResult(double b1, double b2, double k1, double k2)
     {
         double x = SearchX(b1, b2, k1, k2);
         double y = SearchY(b1, b2, k1, k2);
-        result = x + "" + y;
+        result = x + "; " + y;
     }
 
     if (Merge(b1, b2, k1, k2)) result = "линии совпадают";
+    if (Perpendicular(k1, k2)) result = "линии перпендикулярны";
 
     System.Console.Write($"b1 = {b1}, k1 = {k1}, b2 = {b2}, k2 = {k2} -> ({result})");
 }
@@ -40,6 +41,11 @@ static bool Parallel(double k1, double k2)
 static bool Merge(double b1, double b2, double k1, double k2)
 {
     return k1 == k2 && b1 == b2 && k1 == b1;
+}
+
+static bool Perpendicular(double k1, double k2)
+{
+    return k1 * k2 == -1;
 }
 
 static double SearchX(double b1, double b2, double k1, double k2)
