@@ -28,6 +28,16 @@ Console.WriteLine(number / 100 * 10 + number % 10);
 
 // Example 3:
 
+// int number = new Random().Next (100, 1000);
+// Console.WriteLine(number);
+
+// string str = number.ToString();
+
+// Console.Write (str[0]);
+// Console.Write (str[2]);
+
+// Example 4:
+
 // int number = new Random ().Next (100,1000);
 // Console.WriteLine (number);
 // int a = number / 100;
