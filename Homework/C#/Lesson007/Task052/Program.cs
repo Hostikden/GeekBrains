@@ -49,19 +49,20 @@ void MeanColumns(int[,] array)
     double sum;
     double result;
     int count;
+
     for (int i = 0; i < array.GetLength(1); i++)
     {
         sum = 0;
         count = 0;
+
         for (int j = 0; j < array.GetLength(0); j++)
         {
             sum += array[j, i];
             count++;
         }
-        result = sum/count;
+        result = sum / count;
         Console.WriteLine(string.Format("{0:f1}", result));
     }
 }
-
 
 MeanColumns(array);
