@@ -1,10 +1,11 @@
-﻿// int[] arr = { 1, 2, 3, 4, 5 };
-// int i = 0;
-// while (i < arr.Length)
-// {
-//     arr[i] *= i * 2;
-//     Console.Write(arr[i++]);
-// }
+﻿// Задача 52: Задайте двумерный массив из целых чисел. Найдите среднее 
+// арифметическое элементов в каждом столбце.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+
+// Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
 Console.Clear();
 
@@ -14,16 +15,10 @@ int rows = int.Parse(Console.ReadLine());
 Console.Write("Введите количество столбцов массива:\t");
 int columns = int.Parse(Console.ReadLine());
 
-Console.Write("Введите индекс искомого элемента в строке:\t");
-int numberRow = int.Parse(Console.ReadLine());
-
-Console.Write("Введите индекс искомого элемента в столбце:\t");
-int numberColomn = int.Parse(Console.ReadLine());
 
 int[,] array = GetArray(rows, columns, 0, 10);
 PrintArray(array);
 Console.WriteLine();
-SearchNumber(array, numberRow, numberColomn);
 
 
 int[,] GetArray(int rows, int columns, int minValue, int maxValue)
@@ -33,7 +28,7 @@ int[,] GetArray(int rows, int columns, int minValue, int maxValue)
     {
         for (int j = 0; j < columns; j++)
         {
-            result[i, j] = new Random().Next(minValue, maxValue + 1);
+            result[i, j] = new Random().Next(minValue, maxValue);
         }
     }
     return result;
@@ -49,16 +44,24 @@ void PrintArray(int[,] matr)
     }
 }
 
-int[,] SearchNumber(int[,] matr, int i, int j)
+void MeanColumns(int[,] array)
 {
-    int[,] result = new int[i, j];
-    if (i < 0 || i > matr.GetLength(0) || j < 0 || j > matr.GetLength(1))
+    double sum;
+    double result;
+    int count;
+    for (int i = 0; i < array.GetLength(1); i++)
     {
-        Console.WriteLine("Нет такого элемента");
+        sum = 0;
+        count = 0;
+        for (int j = 0; j < array.GetLength(0); j++)
+        {
+            sum += array[j, i];
+            count++;
+        }
+        result = sum/count;
+        Console.WriteLine(string.Format("{0:f1}", result));
     }
-    else
-    {
-        Console.Write($"Число с указанными индексами = {array[numberRow, numberColomn]}");
-    }
-    return result;
 }
+
+
+MeanColumns(array);
