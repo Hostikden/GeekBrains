@@ -16,7 +16,7 @@ Console.Write("Введите количество столбцов массив
 int columns = int.Parse(Console.ReadLine());
 
 
-int[,] array = GetArray(rows, columns, 0, 10);
+int[,] array = GetArray(rows, columns, 0, 9);
 PrintArray(array);
 Console.WriteLine();
 
@@ -28,7 +28,7 @@ int[,] GetArray(int rows, int columns, int minValue, int maxValue)
     {
         for (int j = 0; j < columns; j++)
         {
-            result[i, j] = new Random().Next(minValue, maxValue);
+            result[i, j] = new Random().Next(minValue, maxValue + 1);
         }
     }
     return result;
@@ -48,19 +48,15 @@ void MeanColumns(int[,] array)
 {
     double sum;
     double result;
-    int count;
 
     for (int i = 0; i < array.GetLength(1); i++)
     {
         sum = 0;
-        count = 0;
-
         for (int j = 0; j < array.GetLength(0); j++)
         {
             sum += array[j, i];
-            count++;
         }
-        result = sum / count;
+        result = sum / array.GetLength(0);
         Console.WriteLine(string.Format("{0:f1}", result));
     }
 }
