@@ -52,4 +52,4 @@ count++; // count = count +1 либо count +=1
 
 }
 
-
+System.Console.WriteLine();
