@@ -46,21 +46,19 @@ void PrintArray(int[,] matr)
     for (int i = 0; i < matr.GetLength(0); i++)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
-            Console.Write($"{matr[i, j]} ");
+            Console.Write($"{matr[i, j]}\t");
         Console.WriteLine();
     }
 }
 
-int[,] SearchNumber(int[,] matr, int i, int j)
+void SearchNumber(int[,] matr, int i, int j)
 {
-    int[,] result = new int[i, j];
-    if (i < 0 || i > matr.GetLength(0) || j < 0 || j > matr.GetLength(1))
+    if (i < 0 || i > matr.GetLength(0)-1 || j < 0 || j > matr.GetLength(1)-1)
     {
         Console.WriteLine("Нет такого элемента");
     }
     else
     {
-        Console.Write($"Число с указанными индексами = {array[numberRow, numberColomn]}");
+        Console.WriteLine($"Число с указанными индексами = {array[numberRow, numberColomn]}");
     }
-    return result;
 }

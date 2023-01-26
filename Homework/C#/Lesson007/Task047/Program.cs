@@ -13,7 +13,7 @@ void PrintArray(double[,] matr)
     for (int i = 0; i < matr.GetLength(0); i++)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
-            Console.Write($"{matr[i, j]:f1} ");
+            Console.Write($"{matr[i, j]:f1}\t");
         Console.WriteLine();
     }
 }
@@ -29,6 +29,6 @@ void FillArray(double[,] matr)
     }
 }
 
-double[,] matrix = new double[3,4];
+double[,] matrix = new double[3, 4];
 FillArray(matrix);
 PrintArray(matrix);
