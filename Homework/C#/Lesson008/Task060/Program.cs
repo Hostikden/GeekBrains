@@ -4,7 +4,7 @@
 
 Console.Clear();
 
-int[,,] myArray = new int[2,5,3];
+int[,,] myArray = new int[3,4,5];
 
 
 HashSet<int> numbers = new HashSet<int>();

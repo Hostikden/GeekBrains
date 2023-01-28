@@ -8,17 +8,17 @@ int rows = int.Parse(Console.ReadLine());
 Console.Write("Введите количество столбцов массива: \t");
 int columns = int.Parse(Console.ReadLine());
 
-int[,] array =GetArray(rows, columns, 0 ,10);
+int[,] array = GetArray(rows, columns, 0, 10);
 PrintArray(array);
 
 int[,] GetArray(int rows, int columns, int minValue, int maxValue)
 {
-    int[,] result = new int[rows,columns];
+    int[,] result = new int[rows, columns];
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < columns; j++)
         {
-            result[i,j] = new Random().Next(minValue, maxValue +1);
+            result[i, j] = new Random().Next(minValue, maxValue + 1);
         }
     }
     return result;
