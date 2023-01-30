@@ -5,6 +5,7 @@
 // N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 
 int n = 5;
+Console.WriteLine($"N = {n} -> {ReverseRecurce(n)}");
 
 string ReverseRecurce(int n)
 {
@@ -16,5 +17,3 @@ string ReverseRecurce(int n)
     if (n > 0) return $"{n}" + ReverseRecurce(n - 1);
     return string.Empty;
 }
-
-Console.WriteLine($"N = {n} -> {ReverseRecurce(n)}");
