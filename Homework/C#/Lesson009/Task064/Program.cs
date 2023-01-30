@@ -17,3 +17,20 @@ string ReverseRecurce(int n)
     if (n > 0) return $"{n}" + ReverseRecurce(n - 1);
     return string.Empty;
 }
+
+
+      //////////////////////////////
+     ///    подсказали как      ///
+    ///     элегантно убрать   /// 
+   ///      запятую =)        ///
+  //////////////////////////////
+
+// int number = 4;
+// Console.WriteLine($"N = {number} -> {Recursive(number)}");
+
+// string Recursive(int number)
+// {
+//     int incriment = number < 1 ? 1 : -1;
+//     if (number == 1) return "1";
+//     return $"{number}, " + Recursive(number + incriment);
+// }
