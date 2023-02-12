@@ -45,8 +45,20 @@ https://telegra.ph/Kak-nachat-v-SQLite-09-06
 SELECT - выбери
 * - все данные
 FROM - из
-Общий список - название таблицы ```
+Общий список - название таблицы
+
+```
 
 SQL JOIN на примере POSTGRESQL 14.4
 
 https://github.com/iksergey/Hobby/blob/master/SQL_JOIN/SQL_Join.pdf
+
+## Типы соединения таблиц:
+
+**INNER JOIN**
+
+**LEFT JOIN** 
+
+**RIGHT JOIN**
+
+**FULL JOIN**
