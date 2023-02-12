@@ -8,11 +8,11 @@ int rows = int.Parse(Console.ReadLine());
 
 Console.Write("Введите количество столбцов массива: \t");
 int columns = int.Parse(Console.ReadLine());
-
+    
 int[,] array = GetArray(rows, columns, 0, 9);
 PrintArray(array);
 SortArray(array);
-PrintArray(array);
+PrintArray(array); 
 
 int[,] GetArray(int rows, int columns, int minValue, int maxValue)
 {
